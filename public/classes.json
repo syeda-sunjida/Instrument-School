@@ -1,0 +1,110 @@
+[
+    {
+        "_id": "64835ad8e1f13ff507f7e603",
+        "name": "Piano",
+        "instructor": "John Smith",
+        "availableSeats": 5,
+        "price": 150,
+        "image": "https://example.com/piano.jpg",
+        "category": "popular"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e604",
+        "name": "Guitar",
+        "instructor": "Emily Johnson",
+        "availableSeats": 8,
+        "price": 100,
+        "image": "https://example.com/guitar.jpg",
+        "category": "popular"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e605",
+        "name": "Violin",
+        "instructor": "Michael Davis",
+        "availableSeats": 3,
+        "price": 120,
+        "image": "https://example.com/violin.jpg",
+        "category": "popular"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e606",
+        "name": "Flute",
+        "instructor": "Sarah Thompson",
+        "availableSeats": 4,
+        "price": 80,
+        "image": "https://example.com/flute.jpg",
+        "category": "popular"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e607",
+        "name": "Drums",
+        "instructor": "Alex Rodriguez",
+        "availableSeats": 6,
+        "price": 200,
+        "image": "https://example.com/drums.jpg",
+        "category": "popular"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e608",
+        "name": "Saxophone",
+        "instructor": "Olivia Martinez",
+        "availableSeats": 2,
+        "price": 180,
+        "image": "https://example.com/saxophone.jpg",
+        "category": "popular"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e609",
+        "name": "Trumpet",
+        "instructor": "Daniel Wilson",
+        "availableSeats": 7,
+        "price": 110,
+        "image": "https://example.com/trumpet.jpg",
+        "category": "classic"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e60a",
+        "name": "Cello",
+        "instructor": "Sophia Brown",
+        "availableSeats": 1,
+        "price": 170,
+        "image": "https://example.com/cello.jpg",
+        "category": "classic"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e60b",
+        "name": "Bass Guitar",
+        "instructor": "William Anderson",
+        "availableSeats": 9,
+        "price": 130,
+        "image": "https://example.com/bass-guitar.jpg",
+        "category": "classic"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e60c",
+        "name": "Harp",
+        "instructor": "Ava Garcia",
+        "availableSeats": 3,
+        "price": 250,
+        "image": "https://example.com/harp.jpg",
+        "category": "classic"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e60d",
+        "name": "Accordion",
+        "instructor": "Noah Taylor",
+        "availableSeats": 5,
+        "price": 90,
+        "image": "https://example.com/accordion.jpg",
+        "category": "famous"
+    },
+    {
+        "_id": "64835ad8e1f13ff507f7e60e",
+        "name": "Xylophone",
+        "instructor": "Emma Lee",
+        "availableSeats": 4,
+        "price": 70,
+        "image": "https://example.com/xylophone.jpg",
+        "category": "famous"
+    }
+]
