@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
+import OurClasses from "../Pages/OurClasses/Ourclasses/OurClasses";
 
 // import PrivateRoute from "./PrivateRoute";
 
@@ -29,10 +30,10 @@ export const router = createBrowserRouter([
           path: '/',
           element: <Home></Home>
       }, 
-      // {
-      //   path: 'menu', 
-      //   element: <Menu></Menu>
-      // },
+      {
+        path: 'ourclasses', 
+        element: <OurClasses></OurClasses>
+      },
       // {
       //   path: 'order/:category',
       //   element: <Order></Order>

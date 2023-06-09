@@ -10,7 +10,7 @@ const PopularClasses = () => {
     const popular = menu.filter(item => item.category === 'popular');
     
     return (
-        <section className="mb-12">
+        <section className="mb-12"> 
             <SectionTitle
                 heading="Our Popular Classes"
             ></SectionTitle> 
@@ -22,7 +22,7 @@ const PopularClasses = () => {
                     > </Classes>)
                 }
             </div>
-            <button className="btn btn-warning border-0 border-b-4 mt-4 ">View All Classes</button>
+            {/* <button className="btn btn-warning border-0 border-b-4 mt-4 ">View All Classes</button> */}
         </section>
     );
 };

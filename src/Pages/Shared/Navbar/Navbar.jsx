@@ -19,8 +19,9 @@ const NavBar = () => {
 
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/ourclasses">Classes</Link></li>
         <li><Link to="/instructor">Instructor</Link></li>
-        <li><Link to="/classes">Classes</Link></li>
+        
         {/* <li><Link to="/secret">Secret</Link></li> */}
         <li>
             <Link to="/dashboard/mycart">
