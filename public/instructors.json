@@ -1,118 +1,118 @@
 [
     {
-        "_id": "648379e5e1f13ff507246765",
+        "_id": "648380cfe1f13ff5072e6441",
         "name": "John Smith",
         "email": "johnsmith@example.com",
         "students": 15,
-        "class": "Piano",
+        "specialist": "Piano",
         "image": "https://randomuser.me/api/portraits/men/1.jpg",
         "category": "popular"
     },
     {
-        "_id": "648379e5e1f13ff507246766",
+        "_id": "648380cfe1f13ff5072e6442",
         "name": "Emily Johnson",
         "email": "emilyjohnson@example.com",
         "students": 12,
-        "class": "Guitar",
+        "specialist": "Guitar",
         "image": "https://randomuser.me/api/portraits/women/2.jpg",
         "category": "popular"
     },
     {
-        "_id": "648379e5e1f13ff507246767",
+        "_id": "648380cfe1f13ff5072e6443",
         "name": "Michael Davis",
         "email": "michaeldavis@example.com",
         "students": 8,
-        "class": "Violin",
+        "specialist": "Violin",
         "image": "https://randomuser.me/api/portraits/men/3.jpg",
         "category": "popular"
     },
     {
-        "_id": "648379e5e1f13ff507246768",
+        "_id": "648380cfe1f13ff5072e6444",
         "name": "Sarah Thompson",
         "email": "sarahthompson@example.com",
         "students": 10,
-        "class": "Flute",
+        "specialist": "Flute",
         "image": "https://randomuser.me/api/portraits/women/4.jpg",
         "category": "popular"
     },
     {
-        "_id": "648379e5e1f13ff507246769",
+        "_id": "648380cfe1f13ff5072e6445",
         "name": "Alex Rodriguez",
         "email": "alexrodriguez@example.com",
         "students": 6,
-        "class": "Drums",
+        "specialist": "Drums",
         "image": "https://randomuser.me/api/portraits/men/5.jpg",
         "category": "popular"
     },
     {
-        "_id": "648379e5e1f13ff50724676a",
+        "_id": "648380cfe1f13ff5072e6446",
         "name": "Olivia Martinez",
         "email": "oliviamartinez@example.com",
         "students": 9,
-        "class": "Saxophone",
+        "specialist": "Saxophone",
         "image": "https://randomuser.me/api/portraits/women/6.jpg",
         "category": "popular"
     },
     {
-        "_id": "648379e5e1f13ff50724676b",
+        "_id": "648380cfe1f13ff5072e6447",
         "name": "Daniel Wilson",
         "email": "danielwilson@example.com",
         "students": 11,
-        "class": "Trumpet",
+        "specialist": "Trumpet",
         "image": "https://randomuser.me/api/portraits/men/7.jpg",
         "category": "classic"
     },
     {
-        "_id": "648379e5e1f13ff50724676c",
+        "_id": "648380cfe1f13ff5072e6448",
         "name": "Sophia Brown",
         "email": "sophiabrown@example.com",
         "students": 7,
-        "class": "Cello",
+        "specialist": "Cello",
         "image": "https://randomuser.me/api/portraits/women/8.jpg",
         "category": "classic"
     },
     {
-        "_id": "648379e5e1f13ff50724676d",
+        "_id": "648380cfe1f13ff5072e6449",
         "name": "William Anderson",
         "email": "williamanderson@example.com",
         "students": 13,
-        "class": "Bass Guitar",
+        "specialist": "Bass Guitar",
         "image": "https://randomuser.me/api/portraits/men/9.jpg",
         "category": "classic"
     },
     {
-        "_id": "648379e5e1f13ff50724676e",
+        "_id": "648380cfe1f13ff5072e644a",
         "name": "Ava Garcia",
         "email": "avagarcia@example.com",
         "students": 5,
-        "class": "Harp",
+        "specialist": "Harp",
         "image": "https://randomuser.me/api/portraits/women/10.jpg",
         "category": "classic"
     },
     {
-        "_id": "648379e5e1f13ff50724676f",
+        "_id": "648380cfe1f13ff5072e644b",
         "name": "Noah Taylor",
         "email": "noahtaylor@example.com",
         "students": 8,
-        "class": "Accordion",
+        "specialist": "Accordion",
         "image": "https://randomuser.me/api/portraits/men/11.jpg",
         "category": "classic"
     },
     {
-        "_id": "648379e5e1f13ff507246770",
+        "_id": "648380cfe1f13ff5072e644c",
         "name": "Emma Lee",
         "email": "emmalee@example.com",
         "students": 9,
-        "class": "Sitar",
+        "specialist": "Sitar",
         "image": "https://randomuser.me/api/portraits/women/12.jpg",
         "category": "classic"
     },
     {
-        "_id": "648379e5e1f13ff507246771",
+        "_id": "648380cfe1f13ff5072e644d",
         "name": "Matthew Turner",
         "email": "matthewturner@example.com",
         "students": 7,
-        "class": "Tabla",
+        "specialist": "Tabla",
         "image": "https://randomuser.me/api/portraits/men/13.jpg",
         "category": "classic"
     }

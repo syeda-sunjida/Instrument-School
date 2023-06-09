@@ -15,7 +15,7 @@ const NavBar = () => {
             .then(() => { })
             .catch(error => console.log(error));
     }
-    const logoUrl = "https://media.istockphoto.com/id/939144958/vector/guitar-stylized-icon-vector-simple-lines-acoustic-guitar-design-element.jpg?s=612x612&w=0&k=20&c=KOw-qKVwYAPgriQq4svN10gdHbzItr3bzQLLdXumops=";
+    // const logoUrl = "https://media.istockphoto.com/id/939144958/vector/guitar-stylized-icon-vector-simple-lines-acoustic-guitar-design-element.jpg?s=612x612&w=0&k=20&c=KOw-qKVwYAPgriQq4svN10gdHbzItr3bzQLLdXumops=";
 
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
@@ -64,10 +64,10 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end">
                     <img
-                        src={logoUrl}
+                        src="../../../../public/logo.png"
                         alt="Logo"
                         className="logo"
-                        style={{ width: "80px", height: "auto", borderRadius: "50%", padding: "5px" }}
+                        style={{ width: "80px", height: "80px", borderRadius: "50%", padding: "5px" }}
                     />
                 </div>
             </div>
