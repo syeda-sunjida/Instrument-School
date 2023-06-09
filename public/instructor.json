@@ -1,0 +1,107 @@
+[
+    {
+      "name": "John Smith",
+      "email": "johnsmith@example.com",
+      "students": 15,
+      "class": "Piano",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com",
+      "students": 12,
+      "class": "Guitar",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Michael Davis",
+      "email": "michaeldavis@example.com",
+      "students": 8,
+      "class": "Violin",
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Sarah Thompson",
+      "email": "sarahthompson@example.com",
+      "students": 10,
+      "class": "Flute",
+      "image": "https://randomuser.me/api/portraits/women/4.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Alex Rodriguez",
+      "email": "alexrodriguez@example.com",
+      "students": 6,
+      "class": "Drums",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Olivia Martinez",
+      "email": "oliviamartinez@example.com",
+      "students": 9,
+      "class": "Saxophone",
+      "image": "https://randomuser.me/api/portraits/women/6.jpg",
+      "category": "popular"
+    },
+    {
+      "name": "Daniel Wilson",
+      "email": "danielwilson@example.com",
+      "students": 11,
+      "class": "Trumpet",
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
+      "category": "classic"
+    },
+    {
+      "name": "Sophia Brown",
+      "email": "sophiabrown@example.com",
+      "students": 7,
+      "class": "Cello",
+      "image": "https://randomuser.me/api/portraits/women/8.jpg",
+      "category": "classic"
+    },
+    {
+      "name": "William Anderson",
+      "email": "williamanderson@example.com",
+      "students": 13,
+      "class": "Bass Guitar",
+      "image": "https://randomuser.me/api/portraits/men/9.jpg",
+      "category": "classic"
+    },
+    {
+      "name": "Ava Garcia",
+      "email": "avagarcia@example.com",
+      "students": 5,
+      "class": "Harp",
+      "image": "https://randomuser.me/api/portraits/women/10.jpg",
+      "category": "classic"
+    },
+    {
+      "name": "Noah Taylor",
+      "email": "noahtaylor@example.com",
+      "students": 8,
+      "class": "Accordion",
+      "image": "https://randomuser.me/api/portraits/men/11.jpg",
+      "category": "classic"
+    },
+    {
+      "name": "Emma Lee",
+      "email": "emmalee@example.com",
+      "students": 9,
+      "class": "Sitar",
+      "image": "https://randomuser.me/api/portraits/women/12.jpg",
+      "category": "classic"
+    },
+    {
+      "name": "Matthew Turner",
+      "email": "matthewturner@example.com",
+      "students": 7,
+      "class": "Tabla",
+      "image": "https://randomuser.me/api/portraits/men/13.jpg",
+      "category": "classic"
+    }
+  ]
+  
