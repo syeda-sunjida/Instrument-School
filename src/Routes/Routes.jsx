@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute";
 import MySelectedClasses from "../Layout/MySelectedClasses";
 import Instructor from "../Pages/Instructors/Instructor";
 import NotFoundPage from "../Pages/NotFoundPage";
+import AllUsers from "../Layout/AllUsers/AllUsers";
 // import MySelectedClasses from "../Layout/MySelectedClasses";
 
 
@@ -59,7 +60,10 @@ export const router = createBrowserRouter([
         path: 'myselectedclasses', 
         element: <MySelectedClasses></MySelectedClasses>
       },
-      
+      {
+        path: 'allusers', 
+        element: <AllUsers></AllUsers>
+      },
     ]
   },
   {

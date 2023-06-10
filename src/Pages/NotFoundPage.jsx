@@ -4,8 +4,8 @@ const NotFoundPage = () => {
   return (
     <div style={styles.container}>
       <img
-        src="/path/to/error-image.gif"
-        alt="404 Error"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Ik9tl9M1iYU-nuvvGP9CRjc0RaIHPkxUrQ&usqp=CAU"
+        alt=" "
         style={styles.errorImage}
       />
       <h1 style={styles.notFoundHeading}>Oops! Page Not Found</h1>
