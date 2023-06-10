@@ -7,7 +7,7 @@ const useCart = () => {
     const { refetch, data: cart = [] } = useQuery({
         queryKey: ['enrolled', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/enrolled?email=${user?.email}`)
+            const res = await fetch(`https://singerella-server-syeda-sunjida.vercel.app/enrolled?email=${user?.email}`)
             return res.json();
         },
     })

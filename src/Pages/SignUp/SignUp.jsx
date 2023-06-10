@@ -22,7 +22,7 @@ const SignUp = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                 const saveUser = { name: data.name, email: data.email }
-                fetch('http://localhost:5000/users', {
+                fetch('https://singerella-server-syeda-sunjida.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

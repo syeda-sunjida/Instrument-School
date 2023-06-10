@@ -1,3 +1,4 @@
+
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import SectionTitle from '../../components/SectionTitle';
@@ -9,7 +10,7 @@ const Classes = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/classes');
+        const response = await fetch('https://singerella-server-syeda-sunjida.vercel.app/classes');
         if (!response.ok) {
           throw new Error('Failed to fetch classes data.');
         }
@@ -32,7 +33,7 @@ const Classes = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/enrolled', {
+      const response = await fetch('https://singerella-server-syeda-sunjida.vercel.app/enrolled', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserRole = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users");
+        const response = await fetch("https://singerella-server-syeda-sunjida.vercel.app/users");
         const data = await response.json();
         const user = data.find(user => user.role);
         setUserRole(user.role);

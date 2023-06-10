@@ -10,7 +10,7 @@ const MySelectedClasses = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/enrolled");
+      const response = await fetch("https://singerella-server-syeda-sunjida.vercel.app/enrolled");
       if (!response.ok) {
         throw new Error("Failed to fetch selected classes data.");
       }
@@ -23,7 +23,7 @@ const MySelectedClasses = () => {
 
   const handleDeleteClass = async (_id) => {
     try {
-      const response = await fetch(`http://localhost:5000/enrolled/${_id}`, {
+      const response = await fetch(`https://singerella-server-syeda-sunjida.vercel.app/enrolled/${_id}`, {
         method: "DELETE",
       });
 

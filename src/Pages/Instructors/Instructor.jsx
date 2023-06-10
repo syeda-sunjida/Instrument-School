@@ -7,7 +7,7 @@ const Instructor = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/instructors");
+        const response = await fetch("https://singerella-server-syeda-sunjida.vercel.app/instructors");
         if (!response.ok) {
           throw new Error("Failed to fetch instructors data.");
         }
