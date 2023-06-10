@@ -31,6 +31,8 @@ const Classes = () => {
       window.location.href = '/login'; // Redirect using window.location.href
       return;
     }
+const newClassItem = {...classItem}
+delete newClassItem._id;
 
     try {
       const response = await fetch('https://singerella-server-syeda-sunjida.vercel.app/enrolled', {
@@ -38,7 +40,7 @@ const Classes = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(classItem),
+        body: JSON.stringify(newClassItem),
       });
 
       if (!response.ok) {

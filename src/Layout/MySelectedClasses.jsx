@@ -23,15 +23,17 @@ const MySelectedClasses = () => {
 
   const handleDeleteClass = async (_id) => {
     try {
-      const response = await fetch(`https://singerella-server-syeda-sunjida.vercel.app/enrolled/${_id}`, {
+      const response = await fetch(`http://localhost:5000/enrolled/${_id}`, {
         method: "DELETE",
       });
 
       if (!response.ok) {
         throw new Error("Failed to delete class from My Selected Classes.");
       }
+const  result = await response.json();
 
-      console.log("Deleted class with ID:", _id);
+
+      console.log("Deleted class with ID:", _id,result);
       // Refresh the selected classes data
       fetchData();
     } catch (error) {

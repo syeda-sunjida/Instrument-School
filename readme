@@ -1,0 +1,16 @@
+The name of the website is SINGERELLA.
+
+1. This website is about the classes of music instrument.
+2. Here the laptop screen in 80-90% will give you a better view
+3. you will se popular classes on home page, based on higest students of a class
+4. you can see popular instructor from our collection. 
+5. you can add classes as per your choise, and check them on dashboard's all selected classes.
+6. here is a section, where you can explore instrument from our home page.
+7. There is a theme toggle button on left of the navbar.
+
+packages:
+I have used react icon, swal, react carosoul and many more packages.
+
+
+
+live link: https://singerella-4d0f8.web.app/
