@@ -21,8 +21,13 @@ const Classes = () => {
     fetchData();
   }, []);
 
+  const handleAddToMyClass = (classId) => {
+    // Add logic here to handle adding the class to "My Classes"
+    console.log("Added class with ID:", classId);
+  };
+
   return (
-    <div> 
+    <div>
       <SectionTitle heading="Our Popular Classes" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {classes.map((classItem) => (
@@ -32,6 +37,12 @@ const Classes = () => {
             <p className="text-gray-500">{classItem.instructor}</p>
             <p className="text-gray-500">Available Seats: {classItem.availableSeats}</p>
             <p className="text-gray-500">Price: {classItem.price}</p>
+            <button
+              className="btn btn-primary mt-4"
+              onClick={() => handleAddToMyClass(classItem._id)}
+            >
+              Add to My Class
+            </button>
           </div>
         ))}
       </div>

@@ -13,6 +13,10 @@ import Home from "../Pages/Home/Home";
 // import MyClasses from "../Pages/Myclass/MyClasses";
 import OurInstructor from "../Pages/OurInstructor/OurInstructor/OurInstructor";
 import Classes from "../Pages/Classes/Classes";
+import Dashboard from "../Layout/Dashboard";
+import PrivateRoute from "./PrivateRoute";
+import MySelectedClasses from "../Layout/MySelectedClasses";
+// import MySelectedClasses from "../Layout/MySelectedClasses";
 
 
 
@@ -49,15 +53,15 @@ export const router = createBrowserRouter([
       // }
     ]
   },
-  // {
-  //   path: 'dashboard',
-  //   element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,  
-  //   children: [
-  //     // {
-  //     //   path: 'myeclasses', 
-  //     //   element: <MyClasses></MyClasses>
-  //     // },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,  
+    children: [
+      {
+        path: 'myselectedclasses', 
+        element: <MySelectedClasses></MySelectedClasses>
+      },
       
-  //   ]
-  // }
+    ]
+  }
 ]);
