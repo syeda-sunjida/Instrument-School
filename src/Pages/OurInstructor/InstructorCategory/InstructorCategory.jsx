@@ -3,7 +3,7 @@
 
 import Classes from "../../Shared/Classes/Classes";
 //title chilo items er pashe
-const ClassCategory = ({items}) => {
+const InstructorCategory = ({items}) => {
     return (
         <div className='pt-8'>
             
@@ -23,4 +23,4 @@ const ClassCategory = ({items}) => {
     );
 };
 
-export default ClassCategory;
+export default InstructorCategory;
