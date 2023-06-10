@@ -12,7 +12,7 @@ const PopularInstructors = () => {
     const popular = menu.filter(item => item.category === 'popular');
     
     return (
-        <section className="mb-12">
+        <section className="mb-12"> 
             <SectionTitle
                 heading="Our Popular Instructors"
             ></SectionTitle> 

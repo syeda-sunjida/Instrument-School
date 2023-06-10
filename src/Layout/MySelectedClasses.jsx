@@ -5,30 +5,60 @@ const MySelectedClasses = () => {
   const [selectedClasses, setSelectedClasses] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:5000/enrolled");
-        if (!response.ok) {
-          throw new Error("Failed to fetch selected classes data.");
-        }
-        const data = await response.json();
-        setSelectedClasses(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
     fetchData();
   }, []);
 
-  const handleDeleteClass = (classId) => {
-    // Add logic here to handle deleting the class from the selected classes
-    console.log("Deleted class with ID:", classId);
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/enrolled");
+      if (!response.ok) {
+        throw new Error("Failed to fetch selected classes data.");
+      }
+      const data = await response.json();
+      setSelectedClasses(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDeleteClass = async (_id) => {
+    try {
+      const response = await fetch(`http://localhost:5000/enrolled/${_id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete class from My Selected Classes.");
+      }
+
+      console.log("Deleted class with ID:", _id);
+      // Refresh the selected classes data
+      fetchData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getTotalPrice = () => {
+    return selectedClasses.reduce((total, classItem) => {
+      return total + classItem.price;
+    }, 0);
+  };
+
+  const handlePay = () => {
+    // Implement the logic for payment
+    console.log("Payment logic goes here");
   };
 
   return (
     <div>
       <h2>My Selected Classes</h2>
+      <div style={{ marginBottom: "20px" }}>
+        Total Price: ${getTotalPrice().toFixed(2)}
+      </div>
+      <button className="btn btn-primary" onClick={handlePay}>
+        Pay
+      </button>
       <table className="table" style={{ width: "100%" }}>
         <thead>
           <tr>
@@ -60,6 +90,7 @@ const MySelectedClasses = () => {
           ))}
         </tbody>
       </table>
+      
     </div>
   );
 };

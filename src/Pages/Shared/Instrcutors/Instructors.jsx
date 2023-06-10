@@ -9,7 +9,7 @@ const Instructors = ({ item }) => {
                 <h3 className="uppercase text-xl text-blue-700">{name} </h3> <br />
                 <p className="text-red-500" >Class: {specialist}</p>
 
-            </div>
+            </div> 
 
             
             <br />
