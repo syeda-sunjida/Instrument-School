@@ -23,7 +23,7 @@ const MySelectedClasses = () => {
 
   const handleDeleteClass = async (_id) => {
     try {
-      const response = await fetch(`http://localhost:5000/enrolled/${_id}`, {
+      const response = await fetch(`hhttps://singerella-server-syeda-sunjida.vercel.app/enrolled/${_id}`, {
         method: "DELETE",
       });
 
