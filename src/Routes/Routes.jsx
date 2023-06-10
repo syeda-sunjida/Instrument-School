@@ -6,16 +6,13 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
-// import OurClasses from "../Pages/OurClasses/Ourclasses/OurClasses";
 
-// import Dashboard from "../Layout/Dashboard";
-// import PrivateRoute from "./PrivateRoute";
-// import MyClasses from "../Pages/Myclass/MyClasses";
-import OurInstructor from "../Pages/OurInstructor/OurInstructor/OurInstructor";
+
 import Classes from "../Pages/Classes/Classes";
 import Dashboard from "../Layout/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import MySelectedClasses from "../Layout/MySelectedClasses";
+import Instructor from "../Pages/Instructors/Instructor";
 // import MySelectedClasses from "../Layout/MySelectedClasses";
 
 
@@ -35,8 +32,8 @@ export const router = createBrowserRouter([
         element: <Classes></Classes>
       },
       {
-        path: 'ourinstructor', 
-        element: <OurInstructor></OurInstructor>
+        path: 'instructor', 
+        element: <Instructor></Instructor>
       },
       
       {

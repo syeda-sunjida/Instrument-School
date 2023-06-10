@@ -21,9 +21,24 @@ const Classes = () => {
     fetchData();
   }, []);
 
-  const handleAddToMyClass = (classId) => {
-    // Add logic here to handle adding the class to "My Classes"
-    console.log("Added class with ID:", classId);
+  const handleAddToMyClass = async (classItem) => {
+    try {
+      const response = await fetch("http://localhost:5000/enrolled", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(classItem),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add class to My Classes.");
+      }
+
+      console.log("Added class with ID:", classItem._id);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -39,7 +54,7 @@ const Classes = () => {
             <p className="text-gray-500">Price: {classItem.price}</p>
             <button
               className="btn btn-primary mt-4"
-              onClick={() => handleAddToMyClass(classItem._id)}
+              onClick={() => handleAddToMyClass(classItem)}
             >
               Add to My Class
             </button>
