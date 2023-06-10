@@ -44,9 +44,9 @@ const MySelectedClasses = () => {
             <tr key={classItem._id}>
               <td>{index + 1}</td>
               <td>
-                <img src={classItem.image} alt={classItem.name} className="w-16 h-16" />
+                <img src={classItem.image} alt="" className="w-16 h-16" />
               </td>
-              <td>{classItem.selectedClasses}</td>
+              <td>{classItem.name}</td>
               <td>{classItem.price}</td>
               <td>
                 <button
