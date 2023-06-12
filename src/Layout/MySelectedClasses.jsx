@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
-import { FaTrash } from "react-icons/fa";
+import { useEffect, useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MySelectedClasses = () => {
   const [selectedClasses, setSelectedClasses] = useState([]);
@@ -10,9 +12,9 @@ const MySelectedClasses = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://singerella-server-syeda-sunjida.vercel.app/enrolled");
+      const response = await fetch('https://singerella-server-syeda-sunjida.vercel.app/enrolled');
       if (!response.ok) {
-        throw new Error("Failed to fetch selected classes data.");
+        throw new Error('Failed to fetch selected classes data.');
       }
       const data = await response.json();
       setSelectedClasses(data);
@@ -23,18 +25,15 @@ const MySelectedClasses = () => {
 
   const handleDeleteClass = async (_id) => {
     try {
-      const response = await fetch(`hhttps://singerella-server-syeda-sunjida.vercel.app/enrolled/${_id}`, {
-        method: "DELETE",
+      const response = await fetch(`https://singerella-server-syeda-sunjida.vercel.app/enrolled/${_id}`, {
+        method: 'DELETE',
       });
 
       if (!response.ok) {
-        throw new Error("Failed to delete class from My Selected Classes.");
+        throw new Error('Failed to delete class from My Selected Classes.');
       }
-const  result = await response.json();
 
-
-      console.log("Deleted class with ID:", _id,result);
-      // Refresh the selected classes data
+      toast.success('Class deleted successfully'); // Show success notification
       fetchData();
     } catch (error) {
       console.log(error);
@@ -48,20 +47,23 @@ const  result = await response.json();
   };
 
   const handlePay = () => {
-    // Implement the logic for payment
-    console.log("Payment logic goes here");
+    console.log('Payment logic goes here');
   };
+
+  const uniqueSelectedClasses = Array.from(new Set(selectedClasses.map((classItem) => classItem.name))).map(
+    (name) => {
+      return selectedClasses.find((classItem) => classItem.name === name);
+    }
+  );
 
   return (
     <div>
       <h2>My Selected Classes</h2>
-      <div style={{ marginBottom: "20px" }}>
-        Total Price: ${getTotalPrice().toFixed(2)}
-      </div>
+      <div style={{ marginBottom: '20px' }}>Total Price: ${getTotalPrice().toFixed(2)}</div>
       <button className="btn btn-primary" onClick={handlePay}>
         Pay
       </button>
-      <table className="table" style={{ width: "100%" }}>
+      <table className="table" style={{ width: '100%' }}>
         <thead>
           <tr>
             <th>Index</th>
@@ -72,7 +74,7 @@ const  result = await response.json();
           </tr>
         </thead>
         <tbody>
-          {selectedClasses.map((classItem, index) => (
+          {uniqueSelectedClasses.map((classItem, index) => (
             <tr key={classItem._id}>
               <td>{index + 1}</td>
               <td>
@@ -81,18 +83,20 @@ const  result = await response.json();
               <td>{classItem.name}</td>
               <td>{classItem.price}</td>
               <td>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => handleDeleteClass(classItem._id)}
-                >
-                  <FaTrash />
-                </button>
+                <div>
+                  <button className="btn btn-danger" onClick={() => handleDeleteClass(classItem._id)}>
+                    <FaTrash />
+                  </button>
+                  <button className="btn btn-primary" onClick={handlePay}>
+                    Pay
+                  </button>
+                </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      
+      <ToastContainer />
     </div>
   );
 };

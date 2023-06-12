@@ -1,4 +1,3 @@
-
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import SectionTitle from '../../components/SectionTitle';
@@ -31,8 +30,9 @@ const Classes = () => {
       window.location.href = '/login'; // Redirect using window.location.href
       return;
     }
-const newClassItem = {...classItem}
-delete newClassItem._id;
+
+    const newClassItem = { ...classItem };
+    delete newClassItem._id;
 
     try {
       const response = await fetch('https://singerella-server-syeda-sunjida.vercel.app/enrolled', {
@@ -58,12 +58,11 @@ delete newClassItem._id;
       <SectionTitle heading="Our Popular Classes" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {classes.map((classItem) => (
-          <div key={classItem._id} className="bg-gray-200 p-4 rounded">
-            <img
-              src={classItem.image}
-              alt={classItem.name}
-              className="w-full h-48 object-cover"
-            />
+          <div
+            key={classItem._id}
+            className={`bg-gray-200 p-4 rounded ${classItem.availableSeats === 0 ? 'bg-red-500' : ''}`}
+          >
+            <img src={classItem.image} alt={classItem.name} className="w-full h-48 object-cover" />
             <h3 className="text-xl font-bold mt-2">{classItem.name}</h3>
             <p className="text-gray-500">{classItem.instructor}</p>
             <p className="text-gray-500">Available Seats: {classItem.availableSeats}</p>
@@ -71,6 +70,7 @@ delete newClassItem._id;
             <button
               className="btn btn-primary mt-4"
               onClick={() => handleAddToMyClass(classItem)}
+              disabled={classItem.availableSeats === 0}
             >
               Add to My Class
             </button>
