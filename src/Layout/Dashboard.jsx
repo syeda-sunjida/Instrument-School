@@ -1,53 +1,76 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome,   FaUsers} from 'react-icons/fa';
-// import useCart from "../hooks/useCart";
+import { FaShoppingCart, FaWallet,  FaHome, FaUsers } from 'react-icons/fa';
+
 import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
-    // const [cart] = useCart(); 
- 
-const [isAdmin] = useAdmin();
-    return (
-        <div className="drawer lg:drawer-open ">
-            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col items-center justify-center">
-                <Outlet></Outlet>
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+  const [isAdmin] = useAdmin();
 
-            </div>
-            <div className="drawer-side bg-[#D1A054]">
-                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80">
+  return (
+    <div className="dashboard-container">
+      <div className="sidebar">
+        <ul className="menu">
+          {isAdmin ? (
+            <>
+              <li>
+                <NavLink to="/dashboard" className="sidebar-link">
+                  <FaHome className="sidebar-icon" /> Admin Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/allusers" className="sidebar-link">
+                  <FaUsers className="sidebar-icon" /> All Users
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <>
+            <li>
+                <NavLink to="/dashboard/allusers" className="sidebar-link">
+                  <FaUsers className="sidebar-icon" /> All Users
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/home" className="sidebar-link">
+                  <FaHome className="sidebar-icon" /> User Home
+                </NavLink>
+              </li>
+              
+              <li>
+                <NavLink to="/dashboard/history" className="sidebar-link">
+                  <FaWallet className="sidebar-icon" /> Payment History
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/myselectedclasses" className="sidebar-link">
+                  <FaShoppingCart className="sidebar-icon" /> My Classes
+                </NavLink>
+              </li>
+            </>
+          )}
+          <li>
+            <NavLink to="/" className="sidebar-link">
+              <FaHome className="sidebar-icon" /> Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/ourclasses" className="sidebar-link">
+              Classes
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/instructor" className="sidebar-link">
+              Instructor
+            </NavLink>
+          </li>
+        </ul>
+      </div>
 
-                {
-                        isAdmin ? <>
-                            <li><NavLink to="/dashboard"><FaHome></FaHome> Admin Home</NavLink></li>
-                           
-                            
-                            
-                            <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> All Users</NavLink></li>
-
-                        </> : <>
-                            <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
-                            <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
-                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
-                            <li>
-                                <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart> My Classes
-                                    {/* <span className="badge inl badge-secondary">+{cart?.length || 0}</span> */}
-                                </NavLink>
-
-                            </li>
-                        </>
-                    }
-                    <div className="divider"></div>
-                    <li><NavLink to="/"><FaHome /> Home</NavLink> </li>
-          <li><NavLink to="/ourclasses"> Classes</NavLink></li>
-          <li><NavLink to="/instructor">Instructor</NavLink></li>
-                </ul>
-
-            </div>
-        </div>
-    );
+      <div className="main-content">
+        <Outlet />
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;
